@@ -1,0 +1,10 @@
+<!ELEMENT usuarios (usuario*)>
+        <!ELEMENT usuario (nombre, apellido, ciudad, pais, contacto*)>
+        <!ATTLIST usuario id ID #REQUIRED>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT apellido (#PCDATA)>
+        <!ELEMENT ciudad (#PCDATA)>
+        <!ELEMENT pais (#PCDATA)>
+        <!ELEMENT contacto (telefono, email)>
+        <!ELEMENT telefono (#PCDATA)>
+        <!ELEMENT email (#PCDATA)>

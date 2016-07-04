@@ -1,0 +1,42 @@
+ <!DOCTYPE html>
+
+<html><head><title>Ejemplo aprenderaprogramar.com</title><meta charset="utf-8">
+
+<script type="text/javascript">
+
+var tiempoAnterior;
+
+function ejemploJS1 (evobject) {
+
+alert ('La función de gestión ha recibido objeto Event con tipo: ' + evobject.type);
+
+evobject.target.style.color = 'red'; //Cambiamos el color si se ha producido el evento
+
+if (tiempoAnterior) {
+
+alert('Han transcurrido ' + (evobject.timeStamp-tiempoAnterior)/1000 +' segundos desde el click anterior');}
+
+tiempoAnterior = evobject.timeStamp;
+
+}
+
+function ejemploJS2 (evobject) {alert ('¡Haz hecho doble click!'); evobject.target.style.color = 'red';}
+
+window.onload = function() {
+
+document.getElementById('pulsador1').onclick = ejemploJS1;
+
+document.getElementById('pulsador2').ondblclick = ejemploJS2;}
+
+</script>
+
+</head>
+
+<body><div id="cabecera"><h2>Cursos aprenderaprogramar.com</h2><h3>Ejemplo JavaScript</h3></div>
+
+<div style="color:blue; margin:20px;" id ="pulsador1" > Haz click aquí </div>
+
+<div style="color:blue;" id ="pulsador2" > Haz doble click aquí </div>
+
+</body>
+</html>

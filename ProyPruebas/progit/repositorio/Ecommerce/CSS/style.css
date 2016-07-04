@@ -1,0 +1,145 @@
+* {
+margin: 0px;
+padding: 0px;
+}
+h1 {
+font: bold 35px verdana, sans-serif;
+text-align: left;
+float: left;
+}
+h2 {
+font: bold 20px verdana, sans-serif;
+color: #477AAA;
+}
+header, section, footer, aside, nav, article, figure, figcaption {
+display: block;
+}
+body {
+text-align: center;
+}
+.pp {
+background-color:transparent;
+border: transparent;
+color: #0D5EA7;
+box-shadow: #0D5EA7 0px 1px     ;
+}
+.kk{
+border-color: #000000;
+box-shadow:#000000 3px 3px;
+}
+input#search{
+border-radius: 15px/15px;
+background-image: url(../fotos/lupa2.png);
+background-repeat: no-repeat;
+text-indent: 20px;
+
+
+}
+
+input#search:focus{
+background-image:none;
+}
+
+#agrupar {
+width: 1350px;
+margin: 15px auto;
+text-align: left;
+}
+
+#cabecera {
+
+background: #1A75CE;
+border: 1px solid #999999;
+padding: 20px;
+position:relative;
+text-align: right;
+}
+#menu ul{
+list-style-type: none;
+background: #195D9E;
+padding: 5px 15px;
+text-align: center;	
+}
+
+#menu li {
+display: inline-block;
+list-style:none;
+padding: 5px;
+color: #FFFFFF;
+border-left-style: groove;
+border-color: #000000;
+}
+#menu li.primer{
+border-left-style: none;
+}
+#menu a:hover {
+color: #FFFFFF;
+background-color: #195D9E;
+}
+#menu2 li {
+display: inline-block;
+list-style:none;
+padding: 5px;
+color: #FFFFFF;
+}
+#menu2 a:hover{
+color: #FFFFFF;
+background-color: #195D9E;
+}
+#seccion {
+display: block;
+text-align: left;
+background: #FFFFFF;
+border: 1px solid #999999;
+padding: 20px;
+padding-right:10px
+} 
+#columna {
+float: left;
+width: 220px;
+margin: 20px 0px;
+padding: 20px;
+background: #CCCCCC;
+}
+#adicionar{
+text-align: center;
+}
+#pie {
+clear: both;
+text-align: center;
+padding: 5px;
+border-top: 1px solid #999999;
+}
+article {
+float: left;
+background: #FFFFFF;
+border: 1px solid #999999;
+width: 250px;
+padding: 30px;
+padding-right:40px;
+} 
+
+figure{
+text-align: center;
+}
+
+figcaption{
+text-align: left;
+color: #5A96D8;
+}
+
+figcaption {
+font: italic 14px verdana, sans-serif;
+}
+div {
+width: 100px;
+margin: 20px;
+padding: 10px;
+border: 1px solid #000000;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+-o-box-sizing: border-box;
+-khtml-box-sizing: border-box;
+-ms-box-sizing: border-box;
+box-sizing: border-box;
+}

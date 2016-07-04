@@ -1,0 +1,14 @@
+{
+    "name": "dev/ejemplo-composer",
+    "description": "Uso del composer para dev",
+    "authors": [
+        {
+            "name": "JulioC",
+            "email": "juli0c3sar86@gmail.com"
+        }
+    ],
+    "require": {
+       "silex/silex": "^2.0"
+    }
+
+}

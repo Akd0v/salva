@@ -1,0 +1,18 @@
+{
+    "name": "julio/doctrine",
+    "description": "Uso de doctrine",
+    "type": "exemplos",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "JulioC",
+            "email": "juli0c3sar86@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require":
+    {
+        "silex/silex": "~2.0",
+        "doctrine/dbal": "~2.2"
+    }
+}

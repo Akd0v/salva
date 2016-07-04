@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - produto@localhost" uuid="a34e0c8c-4e21-4508-abbd-69ca07c9a60b">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="MySQL - crud_pdo@localhost" uuid="187bfae1-f238-4bdc-ade8-4b16bd3da14b">
+    <database-info product="MySQL" version="5.7.8-rc-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="crud_pdo"/>
+      <table id="2" parent="1" name="users"/>
+      <column id="3" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="4" parent="2" name="nombre">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="5" parent="2" name="email">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="6" parent="2" name="registro">
+        <data-type>date</data-type>
+      </column>
+      <key id="7" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+  <data-source name="MySQL - ecommerce@localhost" uuid="1a1dfe6c-ac79-401c-b368-fefc9c7da576">
+    <database-info product="MySQL" version="5.7.8-rc-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="ecommerce"/>
+      <table id="2" parent="1" name="caracteristicas"/>
+      <table id="3" parent="1" name="carrinho"/>
+      <table id="4" parent="1" name="categorias"/>
+      <table id="5" parent="1" name="pagos"/>
+      <table id="6" parent="1" name="produtos"/>
+      <table id="7" parent="1" name="users"/>
+      <table id="8" parent="1" name="vendas"/>
+      <table id="9" parent="1" name="vendas_produtos"/>
+      <column id="10" parent="2" name="id_caract">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="11" parent="2" name="nome">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="12" parent="2" name="descrição">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="13" parent="2" name="cantidade">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="14" parent="2" name="precio">
+        <mandatory>1</mandatory>
+        <data-type>float</data-type>
+      </column>
+      <column id="15" parent="2" name="idproduto">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="16" parent="2" name="caminho">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="17" parent="2" name="foto">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <index id="18" parent="2" name="fk8_idx">
+        <columns>idproduto</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="19" parent="2" name="PRIMARY">
+        <columns>id_caract</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="20" parent="2" name="fk1">
+        <columns>idproduto</columns>
+        <ref-key>~.produtos.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="21" parent="3" name="idcarrinho">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="22" parent="3" name="valor">
+        <mandatory>1</mandatory>
+        <data-type>float</data-type>
+      </column>
+      <column id="23" parent="3" name="iduser">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="24" parent="3" name="fk3_idx">
+        <columns>iduser</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="25" parent="3" name="PRIMARY">
+        <columns>idcarrinho</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="26" parent="3" name="fk2">
+        <columns>iduser</columns>
+        <ref-key>~.users.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="27" parent="4" name="idcat">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="28" parent="4" name="nome">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="29" parent="4" name="pai">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="30" parent="4" name="nivel">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="31" parent="4" name="PRIMARY">
+        <columns>idcat</columns>
+        <primary>1</primary>
+      </key>
+      <column id="32" parent="5" name="idpago">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="33" parent="5" name="nome">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="34" parent="5" name="idventa">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="35" parent="5" name="fk2_idx">
+        <columns>idventa</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="36" parent="5" name="PRIMARY">
+        <columns>idpago</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="37" parent="5" name="fk3">
+        <columns>idventa</columns>
+        <ref-key>~.vendas.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="38" parent="6" name="idproduto">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="39" parent="6" name="nome">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="40" parent="6" name="resumem">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="41" parent="6" name="precio">
+        <mandatory>1</mandatory>
+        <data-type>float</data-type>
+      </column>
+      <column id="42" parent="6" name="caminho">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="43" parent="6" name="idcat">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="44" parent="6" name="foto">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="45" parent="6" name="idcarrinho">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="46" parent="6" name="idventa">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="47" parent="6" name="fk20_idx">
+        <columns>idcat</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="48" parent="6" name="fk4_idx">
+        <columns>idcarrinho</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="49" parent="6" name="fk5_idx">
+        <columns>idventa</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="50" parent="6" name="PRIMARY">
+        <columns>idproduto</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="51" parent="6" name="fk4">
+        <columns>idcat</columns>
+        <ref-key>~.categorias.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="52" parent="6" name="fk5">
+        <columns>idventa</columns>
+        <ref-key>~.vendas.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="53" parent="6" name="fk6">
+        <columns>idcarrinho</columns>
+        <ref-key>~.carrinho.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="54" parent="7" name="iduser">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="55" parent="7" name="user">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="56" parent="7" name="nome">
+        <data-type>varchar(250)</data-type>
+      </column>
+      <column id="57" parent="7" name="apellido">
+        <data-type>varchar(250)</data-type>
+      </column>
+      <column id="58" parent="7" name="email">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="59" parent="7" name="endereço">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="60" parent="7" name="password">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <key id="61" parent="7" name="PRIMARY">
+        <columns>iduser</columns>
+        <primary>1</primary>
+      </key>
+      <column id="62" parent="8" name="idvenda">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="63" parent="8" name="valor">
+        <mandatory>1</mandatory>
+        <data-type>float</data-type>
+      </column>
+      <column id="64" parent="8" name="time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="65" parent="8" name="iduser">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="66" parent="8" name="fk1_idx">
+        <columns>iduser</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="67" parent="8" name="PRIMARY">
+        <columns>idvenda</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="68" parent="8" name="fk7">
+        <columns>iduser</columns>
+        <ref-key>~.users.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="69" parent="9" name="vendas_idvendas">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="70" parent="9" name="produtos_idprodutos">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="71" parent="9" name="fk7_idx">
+        <columns>produtos_idprodutos</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="72" parent="9" name="PRIMARY">
+        <columns>vendas_idvendas
+produtos_idprodutos</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="73" parent="9" name="fk8">
+        <columns>vendas_idvendas</columns>
+        <ref-key>~.vendas.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="74" parent="9" name="fk9">
+        <columns>produtos_idprodutos</columns>
+        <ref-key>~.produtos.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+    </database-model>
+  </data-source>
+  <data-source name="MySQL - galeria@localhost" uuid="7a60ea15-db3e-4f26-8dda-ce639c0496d4">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="MySQL - kk@localhost" uuid="3e2cd932-85ca-4e7a-9f0e-e2db25799746">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="MySQL - restaurante@localhost" uuid="110968d7-65c6-4899-9313-065939551abc">
+    <database-info product="MySQL" version="5.7.8-rc-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="restaurante"/>
+      <table id="2" parent="1" name="platillos"/>
+      <column id="3" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="4" parent="2" name="nombre">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="5" parent="2" name="precio">
+        <mandatory>1</mandatory>
+        <data-type>float</data-type>
+      </column>
+      <column id="6" parent="2" name="disponible">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="7" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+  <data-source name="MySQL - experimento@localhost" uuid="8a10ce4b-3295-4079-a777-ca680166c9a9">
+    <database-info product="MySQL" version="5.7.8-rc-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="experimento"/>
+      <table id="2" parent="1" name="carrinho"/>
+      <table id="3" parent="1" name="categorias"/>
+      <table id="4" parent="1" name="produtos"/>
+      <table id="5" parent="1" name="users"/>
+      <table id="6" parent="1" name="vendas"/>
+      <table id="7" parent="1" name="vendas_produtos"/>
+      <table id="8" parent="1" name="images"/>
+      <column id="9" parent="2" name="idcarrinho">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="10" parent="2" name="valor">
+        <mandatory>1</mandatory>
+        <data-type>float</data-type>
+      </column>
+      <column id="11" parent="2" name="iduser">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="12" parent="2" name="fk3_idx">
+        <columns>iduser</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="13" parent="2" name="PRIMARY">
+        <columns>idcarrinho</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="14" parent="2" name="fk2">
+        <columns>iduser</columns>
+        <ref-key>~.users.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="15" parent="3" name="idcat">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="16" parent="3" name="nome">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="17" parent="3" name="pai">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="18" parent="3" name="nivel">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="19" parent="3" name="PRIMARY">
+        <columns>idcat</columns>
+        <primary>1</primary>
+      </key>
+      <column id="20" parent="4" name="idproduto">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="21" parent="4" name="nome">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="22" parent="4" name="resumem">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="23" parent="4" name="precio">
+        <mandatory>1</mandatory>
+        <data-type>float</data-type>
+      </column>
+      <column id="24" parent="4" name="caminho">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="25" parent="4" name="idcat">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="26" parent="4" name="foto">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="27" parent="4" name="idcarrinho">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="28" parent="4" name="idventa">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="29" parent="4" name="fk20_idx">
+        <columns>idcat</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="30" parent="4" name="fk4_idx">
+        <columns>idcarrinho</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="31" parent="4" name="fk5_idx">
+        <columns>idventa</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="32" parent="4" name="PRIMARY">
+        <columns>idproduto</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="33" parent="4" name="fk4">
+        <columns>idcat</columns>
+        <ref-key>~.categorias.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="34" parent="4" name="fk5">
+        <columns>idventa</columns>
+        <ref-key>~.vendas.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="35" parent="4" name="fk6">
+        <columns>idcarrinho</columns>
+        <ref-key>~.carrinho.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="36" parent="5" name="iduser">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="37" parent="5" name="user">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="38" parent="5" name="nome">
+        <data-type>varchar(250)</data-type>
+      </column>
+      <column id="39" parent="5" name="apellido">
+        <data-type>varchar(250)</data-type>
+      </column>
+      <column id="40" parent="5" name="email">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="41" parent="5" name="endereço">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="42" parent="5" name="password">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <key id="43" parent="5" name="PRIMARY">
+        <columns>iduser</columns>
+        <primary>1</primary>
+      </key>
+      <column id="44" parent="6" name="idvenda">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="45" parent="6" name="valor">
+        <mandatory>1</mandatory>
+        <data-type>float</data-type>
+      </column>
+      <column id="46" parent="6" name="time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="47" parent="6" name="iduser">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="48" parent="6" name="fk1_idx">
+        <columns>iduser</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="49" parent="6" name="PRIMARY">
+        <columns>idvenda</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="50" parent="6" name="fk7">
+        <columns>iduser</columns>
+        <ref-key>~.users.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="51" parent="7" name="vendas_idvendas">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="52" parent="7" name="produtos_idprodutos">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="53" parent="7" name="fk7_idx">
+        <columns>produtos_idprodutos</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="54" parent="7" name="PRIMARY">
+        <columns>vendas_idvendas
+produtos_idprodutos</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="55" parent="7" name="fk8">
+        <columns>vendas_idvendas</columns>
+        <ref-key>~.vendas.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="56" parent="7" name="fk9">
+        <columns>produtos_idprodutos</columns>
+        <ref-key>~.produtos.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="57" parent="8" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="58" parent="8" name="contentype">
+        <mandatory>1</mandatory>
+        <data-type>multilinestring</data-type>
+      </column>
+      <column id="59" parent="8" name="imagedata">
+        <data-type>multilinestring</data-type>
+      </column>
+      <key id="60" parent="8" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+  <data-source name="MySQL - silex@localhost" uuid="562f3f1f-2ea8-4e10-92e2-926be43ba8b4">
+    <database-info product="MySQL" version="5.7.8-rc-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="silex"/>
+      <table id="2" parent="1" name="user"/>
+      <column id="3" parent="2" name="idUser">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="4" parent="2" name="nome">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="5" parent="2" name="sobrenome">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="6" parent="2" name="idade">
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="7" parent="2" name="PRIMARY">
+        <columns>idUser</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+  <data-source name="MySQL - silex2@localhost" uuid="234324e3-44dc-4328-8ff8-5202d07d422c">
+    <database-info product="MySQL" version="5.7.8-rc-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="silex2"/>
+      <table id="2" parent="1" name="produtos"/>
+      <column id="3" parent="2" name="idprodutos">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="4" parent="2" name="nome">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="5" parent="2" name="calidade">
+        <mandatory>1</mandatory>
+        <data-type>int(1)</data-type>
+      </column>
+      <key id="6" parent="2" name="PRIMARY">
+        <columns>idprodutos</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>

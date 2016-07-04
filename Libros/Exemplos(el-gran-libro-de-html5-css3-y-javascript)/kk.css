@@ -1,0 +1,28 @@
+/*body {
+text-align: center;
+}*/
+
+#principal{
+	text-transform:lowercase;
+	/*font-family:TimesNewRoman;*/
+	
+}
+
+ p{
+	white-space:10px;
+	font-family:Times-New-Roman;
+	font-weight:bold;
+	border: #204F80;
+	text-transform: capitalize;
+	
+	
+	
+ }
+ 
+ li{
+	 list-style-type:upper-roman;
+	 margin-left: 50px;
+ }
+ 
+ 
+ 

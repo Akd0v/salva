@@ -1,0 +1,55 @@
+body {
+text-align: center;
+}
+
+#principal {
+display: block;
+width: 500px;
+margin: 50px auto;
+padding: 15px;
+text-align: center;
+border: 1px solid #E4EFF4;
+background: #0B99D5;
+
+outline: 2px dashed #ABCCDD;
+outline-offset: 15px;
+
+-moz-transform: skew(20deg);
+-webkit-transform: skew(20deg);
+
+/*-moz-transform: scale(1,-1) rotate(30deg) rotate(30deg) translate(100px);*/
+
+
+#principal:hover{
+-moz-transform: rotate(50deg);
+-webkit-transform: rotate(50deg);
+}
+
+-moz-border-radius: 20px;
+-webkit-border-radius: 20px;
+-o-border-radius: 20px;
+-khtml-border-radius: 20px;
+border-radius: 20px;
+
+-moz-box-shadow: #E4EFF4 -4px -4px;
+-webkit-box-shadow: #E4EFF4 -4px -4px;
+-o-box-shadow: #E4EFF4 -4px -4 px;
+-khtml-box-shadow: #E4EFF4 -4px -4px;
+box-shadow: #E4EFF4 -4px -4px;
+
+background: -webkit-linear-gradient(top, #FFFFFF 50%, #006699 200%);
+background: -moz-linear-gradient(top, #FFFFFF 50%, #006699 200%);
+} 
+
+#titulo {
+font: bold 50px MiNuevaFuente, verdana, sans-serif;
+color: #204F80;
+text-shadow: #4ABBDC 5px 5px 10px;
+}
+
+@font-face { font-family: 'MiNuevaFuente';
+src: url('Adine Kirnberg.ttf');
+}
+
+
+

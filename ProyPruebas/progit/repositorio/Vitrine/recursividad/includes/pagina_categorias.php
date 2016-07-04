@@ -1,0 +1,58 @@
+<?php
+if($num_rows != 0)
+{
+    $nextpage= $page +1;
+    $prevpage= $page -1;
+    ?>
+    <article id="pagina">
+        <ul><?php
+            if ($page == 1)
+            {
+                ?>
+                <li class="previous-off">&laquo; Previous</li>
+                <li class="active">1</li>
+                <?php
+                for($i= $page+1; $i<= $lastpage ; $i++)
+                {?>
+                    <li><a href="http://localhost:8080/categorias.php?idcat=<?= $_GET['idcat']?>&&page=<?= $i;?>"><?= $i;?></a></li>
+                    <?php
+                }
+
+                if($lastpage >$page )
+                {?>
+                    <li class="next"><a href="http://localhost:8080/categorias.php?idcat=<?= $_GET['idcat']?>&&page=<?= $nextpage;?>" >Next &raquo;</a></li><?php
+                }
+                else
+                {?>
+                    <li class="next-off">Next &raquo;</li>
+                    <?php
+                }
+            } else{ ?>
+                <li class="previous"><a href="http://localhost:8080/categorias.php?idcat=<?= $_GET['idcat']?>&&page=<?= $prevpage; ?>">&laquo; Previous</a></li>
+                <?php
+                for($i= 1; $i < $page ; $i++)
+                {?>
+                    <li><a href="http://localhost:8080/categorias.php?idcat=<?= $_GET['idcat']?>&&page=<?= $i;?>"><?= $i;?></a></li>
+                    <?php
+                }?>
+                <li class="active"><?= $page;?></li>
+                <?php
+                for($i= $nextpage; $i<= $lastpage ; $i++)
+                {?>
+                    <li><a href="http://localhost:8080/categorias.php?idcat=<?= $_GET['idcat']?>&&page=<?= $i;?>"><?= $i;?></a></li>
+                    <?php
+                }if($lastpage >$page )
+                {?>
+                    <li class="next"><a href="http://localhost:8080/categorias.php?idcat=<?= $_GET['idcat']?>&&page=<?= $nextpage;?>" >Next &raquo;</a></li><?php
+                }
+                else
+                {?>
+                    <li class="next-off">Next &raquo;</li>
+                    <?php
+                }
+            }?>
+        </ul>
+    </article>
+    <?php
+}
+?>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - produto@localhost" uuid="a34e0c8c-4e21-4508-abbd-69ca07c9a60b">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+    </data-source>
+    <data-source name="MySQL - crud_pdo@localhost" uuid="187bfae1-f238-4bdc-ade8-4b16bd3da14b">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>crud_pdo.*</schema-pattern>
+      <default-schemas>crud_pdo.*</default-schemas>
+    </data-source>
+    <data-source name="MySQL - ecommerce@localhost" uuid="1a1dfe6c-ac79-401c-b368-fefc9c7da576">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+    </data-source>
+    <data-source name="MySQL - galeria@localhost" uuid="7a60ea15-db3e-4f26-8dda-ce639c0496d4">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>galeria.*</schema-pattern>
+      <default-schemas>galeria.*</default-schemas>
+    </data-source>
+    <data-source name="MySQL - kk@localhost" uuid="3e2cd932-85ca-4e7a-9f0e-e2db25799746">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>kk.*</schema-pattern>
+      <default-schemas>kk.*</default-schemas>
+    </data-source>
+    <data-source name="MySQL - restaurante@localhost" uuid="110968d7-65c6-4899-9313-065939551abc">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>restaurante.*</schema-pattern>
+      <default-schemas>restaurante.*</default-schemas>
+    </data-source>
+    <data-source name="MySQL - experimento@localhost" uuid="8a10ce4b-3295-4079-a777-ca680166c9a9">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>experimento.*</schema-pattern>
+      <default-schemas>experimento.*</default-schemas>
+    </data-source>
+    <data-source name="MySQL - silex@localhost" uuid="562f3f1f-2ea8-4e10-92e2-926be43ba8b4">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+    </data-source>
+    <data-source name="MySQL - silex2@localhost" uuid="234324e3-44dc-4328-8ff8-5202d07d422c">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>silex2.*</schema-pattern>
+      <default-schemas>silex2.*</default-schemas>
+    </data-source>
+  </component>
+</project>
