@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - nserie@localhost" uuid="3bdf0061-4526-404f-8518-63d6c458bb5b">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>nserie.*</schema-pattern>
+      <default-schemas>nserie.*</default-schemas>
+    </data-source>
+  </component>
+</project>
